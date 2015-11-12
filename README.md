@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/patrickrb/meanChat.svg)](https://travis-ci.org/patrickrb/meanChat)
+[ ![Codeship Status for patrickrb/meanChat](https://codeship.com/projects/dad1e700-6b0e-0133-f040-1a8865ac42d3/status?branch=master)](https://codeship.com/projects/115104)
 # challengeBoard
 Built with [Angular Fullstack][1] 
 
