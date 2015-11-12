@@ -3,20 +3,32 @@
 angular.module('meanChatApp')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('login', {
-        url: '/login',
-        templateUrl: 'app/account/login/login.html',
-        controller: 'LoginCtrl'
+    .state('main.login', {
+        url: 'login',
+        views: {
+            'content': {
+                templateUrl: 'app/account/login/login.html',
+                controller: 'LoginCtrl'
+            }
+        }
       })
-      .state('signup', {
-        url: '/signup',
-        templateUrl: 'app/account/signup/signup.html',
-        controller: 'SignupCtrl'
+      .state('main.signup', {
+        url: 'signup',
+        views: {
+            'content': {
+              templateUrl: 'app/account/signup/signup.html',
+              controller: 'SignupCtrl'
+            }
+          }
       })
-      .state('settings', {
-        url: '/settings',
-        templateUrl: 'app/account/settings/settings.html',
-        controller: 'SettingsCtrl',
+      .state('main.settings', {
+        url: 'settings',
+        views: {
+          'content': {
+            templateUrl: 'app/account/settings/settings.html',
+            controller: 'SettingsCtrl',
+          }
+        },
         authenticate: true
       });
   });
