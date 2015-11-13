@@ -1,18 +1,20 @@
 'use strict';
 
 angular.module('meanChatApp')
-  .directive('chatWindow', function (messageService, messageFactory, Auth, User) {
+  .directive('chatWindow', function (messageService, messageFactory, Auth) {
     return {
       templateUrl: 'components/chatWindow/chatWindow.html',
       restrict: 'EA',
       link: function (scope, element, attrs) {
     	scope.message;
-      var currentUser = User.get();
+      var currentUser = Auth.getCurrentUser();
 
-      //get current user and set userid in the promise return
-      currentUser.$promise.then(function(data) {
-          scope.userId = data._id;
-      });
+      //get current user and set userid in the promise return only if the user is logged in
+      if(currentUser.$promise){
+        currentUser.$promise.then(function(data) {
+            scope.userId = data._id;
+        });
+      }
 
     	scope.clear = function(){
     		scope.message = "";
