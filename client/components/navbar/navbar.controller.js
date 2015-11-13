@@ -5,6 +5,9 @@ angular.module('meanChatApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
+    },{
+      'title': 'Source Code',
+      'link': 'https://github.com/patrickrb/meanChat'
     }];
 
     $scope.isCollapsed = true;
