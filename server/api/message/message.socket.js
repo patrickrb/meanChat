@@ -5,10 +5,14 @@
 'use strict';
 
 var Message = require('./message.model');
-
+var User = require('../user/user.model');
 exports.register = function(socket) {
   Message.schema.post('save', function (doc) {
-    onSave(socket, doc);
+  	  //lookup and attach user data to socket emission
+	  User.findById(doc.userId, function (err, user) {
+	    doc.userId = user
+    	onSave(socket, doc);
+	  });
   });
   Message.schema.post('remove', function (doc) {
     onRemove(socket, doc);
