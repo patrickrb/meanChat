@@ -14,6 +14,7 @@ angular.module('meanChatApp')
     	}
 
       	scope.submitMessage = function(){
+      		console.log('submitting message: ');
       		//if the user isnt logged in or if the message is blank, return false..will add error messages later
       		if((scope.userId === undefined) || (scope.message === undefined) || (scope.message === '')){
       			return false;
