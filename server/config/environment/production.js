@@ -5,7 +5,7 @@ var path = require('path');
 // =================================
 module.exports = {
   // Root path of server
-  root: path.normalize(__dirname + '/../../../dist'),
+  root: path.normalize(__dirname + '/../../../'),
   // Server IP
   ip:       process.env.OPENSHIFT_NODEJS_IP ||
             process.env.IP ||
