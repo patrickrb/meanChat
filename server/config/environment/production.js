@@ -1,8 +1,11 @@
 'use strict';
+var path = require('path');
 
 // Production specific configuration
 // =================================
 module.exports = {
+  // Root path of server
+  root: path.normalize(__dirname + '/../../../dist'),
   // Server IP
   ip:       process.env.OPENSHIFT_NODEJS_IP ||
             process.env.IP ||

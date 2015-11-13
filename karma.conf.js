@@ -22,6 +22,7 @@ module.exports = function(config) {
       'client/bower_components/angular-ui-router/release/angular-ui-router.js',
       'client/bower_components/angular-gravatar/build/angular-gravatar.js',
       'client/bower_components/angular-moment/angular-moment.js',
+      'client/bower_components/angular-scroll-glue/src/scrollglue.js',
       'client/app/app.js',
       'client/app/**/*.js',
       'client/components/**/*.js',

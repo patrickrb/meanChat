@@ -7,7 +7,8 @@ angular.module('meanChatApp', [
   'btford.socket-io',
   'ui.router',
   'angularMoment',
-  'ui.gravatar'
+  'ui.gravatar',
+  'luegg.directives'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
